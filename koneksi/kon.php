@@ -396,6 +396,35 @@
 			echo "Absen PT.IDEA DESIGN";
 		}
 		
+		function login($id,$password)
+	{
+		$pdo = new PDOx();
+		$dbh=$pdo->getKoneksi();	
+		$dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+		//echo "SELECT $slc FROM $tbl_nm";
+		try 
+		{
+			$result= $dbh->query("SELECT * FROM tabel_user WHERE id='$id' && password='$password'");
+			$cek_user=$result->rowCount();
+			$username="";
+			$userid="";
+			while($row = $result->fetch()) 
+			{
+				$username=$row[0];
+				$userid=$row[1];
+			}
+			return array($username, $userid,$cek_user);			 
+			$dbh = null;
+		}
+		
+		catch (PDOException $e) 
+		{
+			// tampilkan pesan kesalahan jika koneksi gagal
+			print "Koneksi atau query bermasalah: " . $e->getMessage() . "<br/>";
+			die();
+		}	
+	}
+		
 		function getMenu($level,$page)
 		{
 			if($level==1)
