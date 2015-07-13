@@ -5,7 +5,7 @@
 <html>
 
 <head>
-	<title>Absen PT.XXX</title>
+	<title>Absen PT.AVA</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/menu.js"></script>
