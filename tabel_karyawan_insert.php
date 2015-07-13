@@ -1,6 +1,6 @@
 <?php 
 	include 'koneksi/kon.php';
-	
+	$response = array();
 	if (trim($_POST['nip']) ==''){
 		$error[]= '- nip harus diisi';
 	}
@@ -15,18 +15,35 @@
 	$mode=$_POST['mode'];
 	
 	if (isset($error)){
-		echo implode("<br />", $error);
+		if($mode=="4")//android
+		{
+			$response["success"] = 2;
+			echo json_encode($response);
+		}
+		else
+		{
+			echo implode("<br />", $error);	
+		}
+		
 	} else {
 		try{
 			$pdo = new PDOx();
 			$dbh=$pdo->getKoneksi();
 			$dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-			if($mode==1)
+			if($mode==1 || $mode==4)
 			{
 				$sql="INSERT INTO tabel_karyawan(nip,nama)VALUES (:nip,:nama)";
 				$q = $dbh->prepare($sql);
 				$q->execute(array('nip'=>$nip,'nama'=>$nama));
-				echo "Tambah Data Berhasil!";
+				if($mode==4)
+				{
+					$response["success"] = 1;
+					echo json_encode($response);
+				}
+				else
+				{		
+					echo "Tambah Data Berhasil!";	
+				}
 			}
 			
 			else
@@ -40,7 +57,16 @@
 		}
 
 		catch(PDOException $e){
-			echo "Error". $e->getMessage();
+			if($mode==4)
+			{
+				$response["success"] = 3;
+				echo json_encode($response);
+			}
+			else
+			{
+				echo "Error". $e->getMessage();	
+			}
+			
 			exit;
 		}
 
