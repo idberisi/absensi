@@ -91,6 +91,28 @@
 			}
 
 		}
+		
+		function getComboBoxJson($query)// GET TABLE FROM DATABASE AKA STD
+		{
+			 $response = array();
+			 $response["data"] = array();
+			try {
+				$pdo = new PDOx();
+				$koneksi=$pdo->getKoneksi();
+				$database=$pdo->getDatabase();
+				$preparedStatement=$koneksi->prepare($query);
+				$preparedStatement->execute();
+				$val="";
+				$results=$preparedStatement->fetchAll(PDO::FETCH_ASSOC);
+				array_push($response["data"],$results);
+				echo json_encode($response);
+			}
+
+			catch(PDOException $e){
+				echo $e->getMessage();
+			}
+
+		}
 
 		
 		function getTable($table_name,$query)// GET TABLE FROM DATABASE AKA STD
