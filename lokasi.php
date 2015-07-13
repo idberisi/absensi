@@ -5,7 +5,7 @@
 <html>
 
 <head>
-	<title>Absen PT.AVA</title>
+	<title><?php $data->getTitle()?></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/menu.js"></script>
@@ -17,7 +17,7 @@
 	<div id='wrap'>
 		<center>
 			<div id='header'>
-				<h1>XXXXX</h1> </div>
+				<h1><?php $data->getPT()?></h1> </div>
 			<div id='content'>
 				<?php $data->getMenu(1,4)?>
 				<div id='isi'>

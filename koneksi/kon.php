@@ -386,6 +386,16 @@
 
 		}
 		
+		function getPT()
+		{
+			echo "PT.IDEA DESIGN";
+		}
+		
+		function getTitle()
+		{
+			echo "Absen PT.IDEA DESIGN";
+		}
+		
 		function getMenu($level,$page)
 		{
 			if($level==1)

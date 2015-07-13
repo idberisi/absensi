@@ -4,14 +4,14 @@
 ?>
 <html>
 <head>
-<title>Absen PT.XXX</title>
+<title><?php $data->getTitle()?></title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
 	<div id='wrap'>
 		<center>
 			<div id='header'>
-				<h1>XXXXX</h1>
+				<h1><?php $data->getPT()?></h1>
 			</div>
 			<div id='content'>
 				<?php $data->getMenu(1,1)?>
