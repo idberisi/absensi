@@ -6,6 +6,11 @@
 <head>
 <title><?php $data->getTitle()?></title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/jqueryui.js"></script>
+<script src="js/jquery.table2excel.js"></script>
 </head>
 <body>
 	<div id='wrap'>

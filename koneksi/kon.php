@@ -434,10 +434,11 @@
 					echo"
 					<div id='vmenu'>
 					<ul>
-					<li class='slc'><a href='admin.php'>Admin</a></li>
-					<li><a href='karyawan.php'>Karyawan</a></li>
-					<li><a href='lokasi.php'>Lokasi</a></li>
-					<li><a href='absensi.php'>Absensi</a></li>
+					<li class='slc madmin'><a href='admin.php'>Admin</a></li>
+					<li class='mkyw'><a href='karyawan.php'>Karyawan</a></li>
+					<li class='mloc'><a href='lokasi.php'>Lokasi</a></li>
+					<li class='mabsen'><a href='absensi.php'>Absensi</a></li>
+					<li class='mlogout'><a href='login.php'>Logout</a></li>
 					</ul>
 					</div>";
 				}
@@ -446,10 +447,11 @@
 					echo"
 					<div id='vmenu'>
 					<ul>
-					<li><a href='admin.php'>Admin</a></li>
-					<li class='slc'><a href='karyawan.php'>Karyawan</a></li>
-					<li><a href='lokasi.php'>Lokasi</a></li>
-					<li><a href='absensi.php'>Absensi</a></li>
+					<li class='madmin'><a href='admin.php'>Admin</a></li>
+					<li class='slc mkyw'><a href='karyawan.php'>Karyawan</a></li>
+					<li class='mloc'><a href='lokasi.php'>Lokasi</a></li>
+					<li class='mabsen'><a href='absensi.php'>Absensi</a></li>
+					<li class='mlogout'><a href='login.php'>Logout</a></li>
 					</ul>
 					</div>";
 				}
@@ -458,10 +460,11 @@
 					echo"
 					<div id='vmenu'>
 					<ul>
-					<li><a href='admin.php'>Admin</a></li>
-					<li><a href='karyawan.php'>Karyawan</a></li>
-					<li><a href='lokasi.php'>Lokasi</a></li>
-					<li class='slc'><a href='absensi.php'>Absensi</a></li>
+					<li class='madmin'><a href='admin.php'>Admin</a></li>
+					<li class='mkyw'><a href='karyawan.php'>Karyawan</a></li>
+					<li class='mloc'><a href='lokasi.php'>Lokasi</a></li>
+					<li class='slc mabsen'><a href='absensi.php'>Absensi</a></li>
+					<li class='mlogout'><a href='login.php'>Logout</a></li>
 					</ul>
 					</div>";
 				}
@@ -470,10 +473,11 @@
 					echo"
 					<div id='vmenu'>
 					<ul>
-					<li><a href='admin.php'>Admin</a></li>
-					<li><a href='karyawan.php'>Karyawan</a></li>
-					<li class='slc'><a href='lokasi.php'>Lokasi</a></li>
-					<li ><a href='absensi.php'>Absensi</a></li>
+					<li class='madmin'><a href='admin.php'>Admin</a></li>
+					<li class='mkyw'><a href='karyawan.php'>Karyawan</a></li>
+					<li class='slc mloc'><a href='lokasi.php'>Lokasi</a></li>
+					<li class='mabsen'><a href='absensi.php'>Absensi</a></li>
+					<li class='mlogout'><a href='login.php'>Logout</a></li>
 					</ul>
 					</div>";
 				}

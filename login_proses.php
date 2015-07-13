@@ -23,7 +23,7 @@ if ($_POST['userid']!="")
 			}
 			else
 			{
-				header('Location:index.php');	
+				header('Location:karyawan.php');	
 			}
 		}	
 		else
