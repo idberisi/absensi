@@ -2,7 +2,7 @@
 	include 'koneksi/kon.php';
 	
 	if (trim($_POST['id']) ==''){
-		$error[]= '- id harus diisi';
+		$error[]= '- id lokasi harus diisi';
 	}
 
 	$id=$_POST['id'];
